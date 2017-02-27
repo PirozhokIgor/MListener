@@ -1,13 +1,11 @@
 package com.bignerdranch.android.mlistener;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
-public class SongListActivity extends Activity {
+public class SongListActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_song_list);
+    protected Fragment createFragment() {
+        return new SongListFragment();
     }
 }
